@@ -7,8 +7,8 @@ The ISA of this processor consists of 16 instructions with a 4-bit fixed size op
 
 |Operation               | OP-code  | 15 14 13 12 | 11 10 9 8 | 7 6 5 4 | 3 2 1 0 | comment                              |
 |------------------------|----------|-------------|-----------|---------|---------|--------------------------------------|
-|ADDition                | ADD      |      0      |     rd    |   rs1   |   rs2   | rd <= rs1 + rs2                      |
-|SUBtraction             | SUB      |      1      |     rd    |   rs1   |   rs2   | rd <= rs1 - rs2                      |
+|Addition                | ADD      |      0      |     rd    |   rs1   |   rs2   | rd <= rs1 + rs2                      |
+|Subtraction             | SUB      |      1      |     rd    |   rs1   |   rs2   | rd <= rs1 - rs2                      |
 |bitwise AND             | AND      |      2      |     rd    |   rs1   |   rs2   | rd <= rs1 & rs2                      |
 |bitwise OR              | OR       |      3      |     rd    |   rs1   |   rs2   | rd <= rs1 | rs2                      |
 |bitwise XOR             | XOR      |      4      |     rd    |   rs1   |   rs2   | rd <= rs1 ^ rs2                      |
@@ -18,11 +18,11 @@ The ISA of this processor consists of 16 instructions with a 4-bit fixed size op
 |Branch if Less than Zero| BLZ      |      8      |     rs1   | offsetH | offsetL | if rs1 < 0 : PC <= PC + 1 + offset   |
 |unconditional Jump      | JMP      |      9      |     0     | offsetH | offsetL | PC <= PC + 1 + offset                |
 |Jump And Link           | JAL      |      A      |     rd    | offsetH | offsetL | rd <= PC + 1 ; PC <= PC + 1 + offset |
-|RETurn                  | RET      |      B      |     0     |   rs1   |    0    | PC <= rs1                            |
+|Return                  | RET      |      B      |     0     |   rs1   |    0    | PC <= rs1                            |
 |Load Immidiate          | LI       |      C      |     rd    |  immH   |  immL   | rd <= Immediate value                |
 |Load Word               | LW       |      D      |     rd    |   rs1   |    0    | rd <= Mem[rs1]                       |
 |Store Word              | SW       |      E      |     0     |   rs1   |   rs2   | Mem[rs1] <= rs2                      |
-|HaLT                    | HLT      |      F      |     0     |   0     |    0    | suspend operation                    |
+|Halt                    | HLT      |      F      |     0     |   0     |    0    | suspend operation                    |
 --------------------------------------------------------------------------------------------------------------------------
 
 
