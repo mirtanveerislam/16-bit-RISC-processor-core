@@ -1,5 +1,6 @@
 # 16-bit-RISC-processor-core
-Non-pipelined and Pipelined version of a 16-bit RISC processor core and comparison of their differences.
+This project's primary motivation and objective is to understand the process, complexity, and challenges involved in pipelining a processor. Initially, a 16-bit RISC microprocessor based on a simplified version of the MIPS architecture was developed utilizing Harvard memory architecture. Afterward, a 4-stage pipeline was introduced, and pipeline registers were added to improve the processor's performance. A data forwarding unit was designed and integrated to address data dependencies.
+
 
 # ISA instruction table
 The ISA of this processor consists of 16 instructions with a 4-bit fixed size operation code. The instruction words are 16-bits long. There are 16, 16-bit wide architected register available.
@@ -24,7 +25,15 @@ The ISA of this processor consists of 16 instructions with a 4-bit fixed size op
 |HaLT                    | HLT      |      F      |     0     |   0     |    0    | suspend operation                    |
 --------------------------------------------------------------------------------------------------------------------------
 
+
 # Comparisons
+## Performance
+A clock cycle counter was utilized to measure the number of cycles taken by both designs to execute identical code until reaching the halt instruction.
+
+|         **Non-pipelined**             |          **Pipelined**           |
+|---------------------------------------|----------------------------------|
+| ![Alt text](Non_Pipelined/RUN_NP.png) | ![Alt text](Pipelined/RUN_P.png) |
+
 ## Timing
 The Pipelined design achivied 238MHz max frequency and the pipelined design achived 250MHz.
 ### for 100MHZ
