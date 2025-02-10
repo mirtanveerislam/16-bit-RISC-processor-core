@@ -9,10 +9,10 @@
 *************************************************************/
 
 module RISC_TB;
-    logic CLK;
-    logic RST_N;
-    logic HOLT;
-    logic [31:0] CLOCK_CYCLE_NUMBER;
+    logic       CLK;
+    logic       RST_N;
+    logic       HOLT;
+    logic [7:0] CLOCK_CYCLE;
     
     risc_soc RISC_SoC (
         .clk   ( CLK   ),
@@ -26,27 +26,29 @@ module RISC_TB;
     end
     
     initial begin
-	$display(" IR  : next PC");
-        $display("--------------");
+        $display("|--------------------------|");
+        $display("|  CC   :   IR   | next PC |");
+        $display("|-------:--------|---------|");
               RST_N = 1'b0;
         #50   RST_N = 1'b1;
-        #1600 $stop;
+        // #1600 $stop;
     end
 
-    //always @ (RISC_SoC.RISC_PL.DU.IFU.IR) begin
-    //    $display("%H : %H", RISC_SoC.RISC_PL.DU.IFU.PC, RISC_SoC.RISC_PL.DU.IFU.IR);
-    //end
-
     initial begin
-	$monitor("%H :  %H", RISC_SoC.RISC_PL.DU.IFU.IR,RISC_SoC.RISC_PL.DU.IFU.PC);
+        $monitor("|  %D  :  %H  |  %H   |", CLOCK_CYCLE, RISC_SoC.RISC_NP.DU.IFU.IR, RISC_SoC.RISC_NP.DU.IFU.PC);
     end
 
     always @ (posedge CLK or negedge RST_N) begin
         if(!RST_N) begin
-            CLOCK_CYCLE_NUMBER <= 32'b0;
+            CLOCK_CYCLE <= 32'b0;
         end
         else if(!HOLT) begin
-            CLOCK_CYCLE_NUMBER <= CLOCK_CYCLE_NUMBER + 32'b1;
+            CLOCK_CYCLE <= CLOCK_CYCLE + 32'b1;
+        end
+	else if(HOLT) begin
+            CLOCK_CYCLE <= CLOCK_CYCLE;
+            $display("|--------------------------|");
+            $stop;
         end
     end
 
