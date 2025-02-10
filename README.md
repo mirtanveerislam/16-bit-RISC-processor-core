@@ -36,23 +36,6 @@ A clock cycle counter was utilized to measure the number of cycles taken by both
 
 ## Timing
 The Pipelined design achivied 238MHz max frequency and the pipelined design achived 250MHz.
-### for 100MHZ
-**Non-pipelined** 
-
-![Alt text](Non_Pipelined/Timing_100MHz_NP.png)
-
-**Pipelined** 
-
-![Alt text](/Pipelined/Timing_100MHz_P.png)
-
-### for FMAX
-**Non-pipelined** 
-
-![Alt text](Non_Pipelined/Timing_FMAX_250MHz_NP.png)
-
-**Pipelined** 
-
-![Alt text](/Pipelined/Timing_FMAX_238MHz_P.png)
 
 ## Power
 ### for 100MHZ
@@ -72,6 +55,24 @@ The Pipelined design achivied 238MHz max frequency and the pipelined design achi
 **Pipelined** 
 
 ![Alt text](/Pipelined/Power_FMAX_238MHz_P.png)
+
+### for 100MHZ
+**Non-pipelined** 
+
+![Alt text](Non_Pipelined/Timing_100MHz_NP.png)
+
+**Pipelined** 
+
+![Alt text](/Pipelined/Timing_100MHz_P.png)
+
+### for FMAX
+**Non-pipelined** 
+
+![Alt text](Non_Pipelined/Timing_FMAX_250MHz_NP.png)
+
+**Pipelined** 
+
+![Alt text](/Pipelined/Timing_FMAX_238MHz_P.png)
 
 ## Utilization
 ### for 100MHZ
