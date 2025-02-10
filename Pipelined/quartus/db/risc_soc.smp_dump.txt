@@ -1,0 +1,7 @@
+
+State Machine - |risc_soc|risc_core_pl:RISC_PL|control_unit:CU|current_state
+Name current_state.S_HLT current_state.S_STL current_state.S_NOR current_state.S_RST 
+current_state.S_RST 0 0 0 0 
+current_state.S_NOR 0 0 1 1 
+current_state.S_STL 0 1 0 1 
+current_state.S_HLT 1 0 0 1 

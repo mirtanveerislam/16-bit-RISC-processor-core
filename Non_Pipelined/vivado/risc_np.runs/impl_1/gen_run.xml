@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a50ticsg324-1L" LaunchTime="1702859085">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BG-DRC" Name="risc_soc_synth.drc"/>
+  <File Type="BG-BGN" Name="risc_soc_synth.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="risc_soc_synth.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="risc_soc_synth.ltx"/>
+  <File Type="BITSTR-MMI" Name="risc_soc_synth.mmi"/>
+  <File Type="BITSTR-BMM" Name="risc_soc_synth_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="risc_soc_synth.nky"/>
+  <File Type="BITSTR-RBT" Name="risc_soc_synth.rbt"/>
+  <File Type="BITSTR-MSK" Name="risc_soc_synth.msk"/>
+  <File Type="BG-BIN" Name="risc_soc_synth.bin"/>
+  <File Type="BG-BIT" Name="risc_soc_synth.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="risc_soc_synth_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="risc_soc_synth_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="risc_soc_synth_bus_skew_postroute_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="risc_soc_synth.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="risc_soc_synth_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="risc_soc_synth_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="risc_soc_synth_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="risc_soc_synth_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="risc_soc_synth_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW" Name="risc_soc_synth_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="risc_soc_synth_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="risc_soc_synth_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="risc_soc_synth_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="risc_soc_synth_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="risc_soc_synth_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="risc_soc_synth_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="risc_soc_synth_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="risc_soc_synth_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="risc_soc_synth_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="risc_soc_synth_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="risc_soc_synth_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="risc_soc_synth_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="risc_soc_synth_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="risc_soc_synth_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="risc_soc_synth_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="risc_soc_synth_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="risc_soc_synth_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="risc_soc_synth_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="risc_soc_synth_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="risc_soc_synth_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="risc_soc_synth_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="risc_soc_synth_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="risc_soc_synth_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="risc_soc_synth_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="risc_soc_synth_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="risc_soc_synth_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="risc_soc_synth_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="risc_soc_synth_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="risc_soc_synth_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="risc_soc_synth_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="risc_soc_synth_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="risc_soc_synth_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="risc_soc_synth_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="risc_soc_synth_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="risc_soc_synth_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="risc_soc_synth_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="risc_soc_synth_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="risc_soc_synth.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="risc_soc_synth_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="risc_soc_synth_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="risc_soc_synth_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="risc_soc_synth_timing_summary_init.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="risc_soc_synth_bus_skew_routed.rpx"/>
+  <File Type="REPORTS-TCL" Name="risc_soc_synth_reports.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="risc_soc_synth_bus_skew_routed.pb"/>
+  <File Type="PA-TCL" Name="risc_soc_synth.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../arth_logic_unit.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../control_unit.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../datapath.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../exec_unit.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../inst_decode_unit.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../inst_fetch_unit.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../regfile.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../risc_core.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../signextender.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/risc_soc_synth.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="risc_soc_synth"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/const.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Performance_ExplorePostRoutePhysOpt" Flow="Vivado Implementation 2019">
+      <Desc>Similar to Peformance_Explore, but enables the physical optimization step (phys_opt_design) with the Explore directive after routing.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design">
+      <Option Id="Directive">0</Option>
+    </Step>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design">
+      <Option Id="Directive">0</Option>
+    </Step>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design" EnableStepBool="1">
+      <Option Id="Directive">0</Option>
+    </Step>
+    <Step Id="route_design">
+      <Option Id="MoreOptsStr"><![CDATA[-tns_cleanup]]></Option>
+      <Option Id="Directive">0</Option>
+    </Step>
+    <Step Id="post_route_phys_opt_design" EnableStepBool="1">
+      <Option Id="Directive">0</Option>
+    </Step>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_0"/>
+</GenRun>

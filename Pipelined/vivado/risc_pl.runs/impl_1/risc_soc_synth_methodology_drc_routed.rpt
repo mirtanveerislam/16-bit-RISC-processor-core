@@ -1,0 +1,56 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Sun Dec 17 17:13:19 2023
+| Host         : MIR-ThinkPad running 64-bit Ubuntu 22.04.3 LTS
+| Command      : report_methodology -file risc_soc_synth_methodology_drc_routed.rpt -pb risc_soc_synth_methodology_drc_routed.pb -rpx risc_soc_synth_methodology_drc_routed.rpx
+| Design       : risc_soc_synth
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 4
++-----------+----------+-------------------------------+------------+
+| Rule      | Severity | Description                   | Violations |
++-----------+----------+-------------------------------+------------+
+| LUTAR-1   | Warning  | LUT drives async reset alert  | 2          |
+| TIMING-18 | Warning  | Missing input or output delay | 2          |
++-----------+----------+-------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell RISC_PL/DU/DEPR/PC[15]_i_4, with 2 or more inputs, drives asynchronous preset/clear pin(s) RISC_PL/CU/FSM_sequential_current_state_reg[0]/PRE, RISC_PL/CU/FSM_sequential_current_state_reg[1]/PRE, RISC_PL/DU/store_pc_reg[0]/CLR, RISC_PL/DU/store_pc_reg[10]/CLR, RISC_PL/DU/store_pc_reg[11]/CLR, RISC_PL/DU/store_pc_reg[12]/CLR, RISC_PL/DU/store_pc_reg[13]/CLR, RISC_PL/DU/store_pc_reg[14]/CLR, RISC_PL/DU/store_pc_reg[15]/CLR, RISC_PL/DU/store_pc_reg[1]/CLR, RISC_PL/DU/store_pc_reg[2]/CLR, RISC_PL/DU/store_pc_reg[3]/CLR, RISC_PL/DU/store_pc_reg[4]/CLR, RISC_PL/DU/store_pc_reg[5]/CLR, RISC_PL/DU/store_pc_reg[6]/CLR (the first 15 of 124 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell RISC_PL/DU/IFU/PC[15]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) RISC_PL/DU/IFU/PC_reg[0]/CLR, RISC_PL/DU/IFU/PC_reg[10]/CLR, RISC_PL/DU/IFU/PC_reg[11]/CLR, RISC_PL/DU/IFU/PC_reg[12]/CLR, RISC_PL/DU/IFU/PC_reg[13]/CLR, RISC_PL/DU/IFU/PC_reg[14]/CLR, RISC_PL/DU/IFU/PC_reg[15]/CLR, RISC_PL/DU/IFU/PC_reg[1]/CLR, RISC_PL/DU/IFU/PC_reg[2]/CLR, RISC_PL/DU/IFU/PC_reg[3]/CLR, RISC_PL/DU/IFU/PC_reg[4]/CLR, RISC_PL/DU/IFU/PC_reg[5]/CLR, RISC_PL/DU/IFU/PC_reg[6]/CLR, RISC_PL/DU/IFU/PC_reg[7]/CLR, RISC_PL/DU/IFU/PC_reg[8]/CLR (the first 15 of 16 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on rst_n relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An output delay is missing on holt relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+

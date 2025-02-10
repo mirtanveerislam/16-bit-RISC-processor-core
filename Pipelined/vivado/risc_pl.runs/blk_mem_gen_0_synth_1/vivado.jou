@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Dec 10 14:33:11 2023
+# Process ID: 7332
+# Current directory: /home/tanveer/risc/Pipelined/vivado/risc_pl.runs/blk_mem_gen_0_synth_1
+# Command line: vivado -log blk_mem_gen_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_gen_0.tcl
+# Log file: /home/tanveer/risc/Pipelined/vivado/risc_pl.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.vds
+# Journal file: /home/tanveer/risc/Pipelined/vivado/risc_pl.runs/blk_mem_gen_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source blk_mem_gen_0.tcl -notrace

@@ -1,0 +1,945 @@
+Analysis & Synthesis report for risc_soc
+Sun Dec 17 16:32:18 2023
+Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |risc_soc|risc_core_pl:RISC_PL|control_unit:CU|current_state
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |risc_soc
+ 13. Parameter Settings for User Entity Instance: risc_core_pl:RISC_PL
+ 14. Parameter Settings for User Entity Instance: risc_core_pl:RISC_PL|control_unit:CU
+ 15. Parameter Settings for User Entity Instance: memory:IMEM
+ 16. Parameter Settings for User Entity Instance: memory:DMEM
+ 17. Port Connectivity Checks: "memory:IMEM"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sun Dec 17 16:32:18 2023          ;
+; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Revision Name                   ; risc_soc                                       ;
+; Top-level Entity Name           ; risc_soc                                       ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 0                                              ;
+; Total pins                      ; 3                                              ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; risc_soc           ; risc_soc           ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                      ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                        ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
+; ../risc_soc.v                    ; yes             ; User Verilog HDL File  ; /home/tanveer/risc/Pipelined/risc_soc.v             ;         ;
+; ../risc_core.v                   ; yes             ; User Verilog HDL File  ; /home/tanveer/risc/Pipelined/risc_core.v            ;         ;
+; ../regfile.v                     ; yes             ; User Verilog HDL File  ; /home/tanveer/risc/Pipelined/regfile.v              ;         ;
+; ../memory.v                      ; yes             ; User Verilog HDL File  ; /home/tanveer/risc/Pipelined/memory.v               ;         ;
+; ../inst_fetch_unit.v             ; yes             ; User Verilog HDL File  ; /home/tanveer/risc/Pipelined/inst_fetch_unit.v      ;         ;
+; ../inst_decode_unit.v            ; yes             ; User Verilog HDL File  ; /home/tanveer/risc/Pipelined/inst_decode_unit.v     ;         ;
+; ../if_id_pl_reg.v                ; yes             ; User Verilog HDL File  ; /home/tanveer/risc/Pipelined/if_id_pl_reg.v         ;         ;
+; ../id_ex_pl_reg.v                ; yes             ; User Verilog HDL File  ; /home/tanveer/risc/Pipelined/id_ex_pl_reg.v         ;         ;
+; ../exec_unit.v                   ; yes             ; User Verilog HDL File  ; /home/tanveer/risc/Pipelined/exec_unit.v            ;         ;
+; ../ex_wb_pl_reg.v                ; yes             ; User Verilog HDL File  ; /home/tanveer/risc/Pipelined/ex_wb_pl_reg.v         ;         ;
+; ../datapath.v                    ; yes             ; User Verilog HDL File  ; /home/tanveer/risc/Pipelined/datapath.v             ;         ;
+; ../data_forwarding_unit.v        ; yes             ; User Verilog HDL File  ; /home/tanveer/risc/Pipelined/data_forwarding_unit.v ;         ;
+; ../control_unit.v                ; yes             ; User Verilog HDL File  ; /home/tanveer/risc/Pipelined/control_unit.v         ;         ;
+; ../arth_logic_unit.v             ; yes             ; User Verilog HDL File  ; /home/tanveer/risc/Pipelined/arth_logic_unit.v      ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 0           ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 0           ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 0           ;
+;     -- 5 input functions                    ; 0           ;
+;     -- 4 input functions                    ; 0           ;
+;     -- <=3 input functions                  ; 0           ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 3           ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; holt~output ;
+; Maximum fan-out                             ; 1           ;
+; Total fan-out                               ; 3           ;
+; Average fan-out                             ; 0.50        ;
++---------------------------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |risc_soc                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 3    ; 0            ; |risc_soc           ; risc_soc    ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------+
+; State Machine - |risc_soc|risc_core_pl:RISC_PL|control_unit:CU|current_state                                ;
++---------------------+---------------------+---------------------+---------------------+---------------------+
+; Name                ; current_state.S_HLT ; current_state.S_STL ; current_state.S_NOR ; current_state.S_RST ;
++---------------------+---------------------+---------------------+---------------------+---------------------+
+; current_state.S_RST ; 0                   ; 0                   ; 0                   ; 0                   ;
+; current_state.S_NOR ; 0                   ; 0                   ; 1                   ; 1                   ;
+; current_state.S_STL ; 0                   ; 1                   ; 0                   ; 1                   ;
+; current_state.S_HLT ; 1                   ; 0                   ; 0                   ; 1                   ;
++---------------------+---------------------+---------------------+---------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                             ;
++-----------------------------------------------------------------------+----------------------------------------+
+; Register name                                                         ; Reason for Removal                     ;
++-----------------------------------------------------------------------+----------------------------------------+
+; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|IR[0..15]        ; Stuck at GND due to stuck port data_in ;
+; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[0..23]   ; Stuck at GND due to stuck port data_in ;
+; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[0..23]   ; Stuck at GND due to stuck port data_in ;
+; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[0..7,25] ; Stuck at GND due to stuck port data_in ;
+; risc_core_pl:RISC_PL|datapath:DU|store_pc[0..15]                      ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][0]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][1]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][2]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][3]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][4]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][5]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][6]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][7]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][8]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][9]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][10]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][11]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][12]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][13]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][14]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][15]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[1][0]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[1][1]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[1][2]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[1][3]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[1][4]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[1][5]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[1][6]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[1][7]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[1][8]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[1][9]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[1][10]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[1][11]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[1][12]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[1][13]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[1][14]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[1][15]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[2][0]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[2][1]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[2][2]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[2][3]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[2][4]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[2][5]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[2][6]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[2][7]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[2][8]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[2][9]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[2][10]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[2][11]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[2][12]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[2][13]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[2][14]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[2][15]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[3][0]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[3][1]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[3][2]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[3][3]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[3][4]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[3][5]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[3][6]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[3][7]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[3][8]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[3][9]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[3][10]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[3][11]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[3][12]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[3][13]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[3][14]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[3][15]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[4][0]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[4][1]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[4][2]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[4][3]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[4][4]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[4][5]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[4][6]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[4][7]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[4][8]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[4][9]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[4][10]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[4][11]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[4][12]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[4][13]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[4][14]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[4][15]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[5][0]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[5][1]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[5][2]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[5][3]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[5][4]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[5][5]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[5][6]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[5][7]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[5][8]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[5][9]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[5][10]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[5][11]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[5][12]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[5][13]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[5][14]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[5][15]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[6][0]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[6][1]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[6][2]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[6][3]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[6][4]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[6][5]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[6][6]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[6][7]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[6][8]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[6][9]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[6][10]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[6][11]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[6][12]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[6][13]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[6][14]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[6][15]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[7][0]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[7][1]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[7][2]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[7][3]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[7][4]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[7][5]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[7][6]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[7][7]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[7][8]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[7][9]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[7][10]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[7][11]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[7][12]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[7][13]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[7][14]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[7][15]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[8][0]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[8][1]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[8][2]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[8][3]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[8][4]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[8][5]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[8][6]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[8][7]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[8][8]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[8][9]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[8][10]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[8][11]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[8][12]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[8][13]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[8][14]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[8][15]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[9][0]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[9][1]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[9][2]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[9][3]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[9][4]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[9][5]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[9][6]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[9][7]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[9][8]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[9][9]           ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[9][10]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[9][11]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[9][12]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[9][13]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[9][14]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[9][15]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[10][0]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[10][1]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[10][2]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[10][3]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[10][4]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[10][5]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[10][6]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[10][7]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[10][8]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[10][9]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[10][10]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[10][11]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[10][12]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[10][13]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[10][14]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[10][15]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][0]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][1]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][2]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][3]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][4]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][5]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][6]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][7]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][8]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][9]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][10]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][11]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][12]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][13]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][14]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][15]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][0]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][1]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][2]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][3]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][4]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][5]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][6]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][7]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][8]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][9]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][10]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][11]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][12]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][13]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][14]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][15]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][0]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][1]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][2]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][3]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][4]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][5]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][6]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][7]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][8]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][9]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][10]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][11]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][12]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][13]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][14]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][15]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][0]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][1]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][2]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][3]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][4]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][5]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][6]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][7]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][8]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][9]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][10]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][11]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][12]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][13]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][14]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][15]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][0]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][1]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][2]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][3]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][4]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][5]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][6]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][7]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][8]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][9]          ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][10]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][11]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][12]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][13]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][14]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][15]         ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[8..24]   ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[24..55]  ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|PC[0..15]        ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|control_unit:CU|current_state~4                  ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|control_unit:CU|current_state~5                  ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|control_unit:CU|current_state.S_RST              ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|control_unit:CU|current_state.S_NOR              ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|control_unit:CU|current_state.S_STL              ; Lost fanout                            ;
+; risc_core_pl:RISC_PL|control_unit:CU|current_state.S_HLT              ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 416                               ;                                        ;
++-----------------------------------------------------------------------+----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                     ;
++-----------------------------------------------------------------+---------------------------+-------------------------------------------------------------------+
+; Register name                                                   ; Reason for Removal        ; Registers Removed due to This Register                            ;
++-----------------------------------------------------------------+---------------------------+-------------------------------------------------------------------+
+; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|IR[3]      ; Stuck at GND              ; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[19], ;
+;                                                                 ; due to stuck port data_in ; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[15], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[11], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][0],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][1],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][2],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][3],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][4],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][5],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][6],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][7],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][8],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][9],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][10],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][11],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][12],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][13],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][14],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][0],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][1],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][2],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][3],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][4],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][5],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][6],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][7],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][8],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][9],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][10],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][11],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][12],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][13],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][14],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][0],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][1],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][2],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][3],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][4],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][5],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][6],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][7],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][8],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][9],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][10],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][11],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][12],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][13],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][14],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][0],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][1],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][2],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][3],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][4],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][5],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][6],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][7],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][8],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][9],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][10],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][11],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][12],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][13],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][14],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][0],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][1],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][2],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][3],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][4],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][5],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][6],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][7],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][8],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][9],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][10],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][11],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][12],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][13],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][14],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[23], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[22], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[21], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[20], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[19], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[18], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[17], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[16], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[15], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[14], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[13], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[12], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[11], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[10], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[9],  ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[40]  ;
+; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|IR[12]     ; Stuck at GND              ; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[0],  ;
+;                                                                 ; due to stuck port data_in ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[0],  ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[0],  ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[25], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|store_pc[15],                    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|store_pc[14],                    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|store_pc[13],                    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|store_pc[12],                    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|store_pc[11],                    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|store_pc[10],                    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|store_pc[9],                     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|store_pc[8],                     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|store_pc[7],                     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|store_pc[6],                     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|store_pc[5],                     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|store_pc[4],                     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|store_pc[3],                     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|store_pc[2],                     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|store_pc[1],                     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|store_pc[0],                     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][0],      ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][1],      ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][2],      ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][3],      ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][7],      ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][8],      ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][9],      ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][10],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][11],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][12],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][13],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][14],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][15],     ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[24], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[55], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[32], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[31], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[30], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[29], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[28], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[27], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[26], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[25], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[24]  ;
+; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|IR[7]      ; Stuck at GND              ; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[23], ;
+;                                                                 ; due to stuck port data_in ; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[11], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[23], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[22], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[21], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[20], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[19], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[18], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[17], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[16], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[15], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[54], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[53], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[52], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[51], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[50], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[49], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[48], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[47], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[46], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[45], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[44], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[43], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[42], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[41], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[39], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[38], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[37], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[36], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[35], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[34], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[33], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|PC[9]        ;
+; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[3] ; Stuck at GND              ; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|PC[0],       ;
+;                                                                 ; due to stuck port data_in ; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|PC[15],      ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|PC[14],      ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|PC[13],      ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|PC[12],      ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|PC[11],      ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|PC[10],      ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|PC[8],       ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|PC[7],       ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|PC[6],       ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|PC[5],       ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|PC[4],       ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|PC[3],       ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|PC[2],       ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|PC[1]        ;
+; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|IR[11]     ; Stuck at GND              ; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[7],  ;
+;                                                                 ; due to stuck port data_in ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[7],  ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[7],  ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[11][15],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[12][15],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[13][15],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[14][15],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[15][15],    ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[8]   ;
+; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|IR[6]      ; Stuck at GND              ; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[22], ;
+;                                                                 ; due to stuck port data_in ; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[10], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[14], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][6]       ;
+; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|IR[5]      ; Stuck at GND              ; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[21], ;
+;                                                                 ; due to stuck port data_in ; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[9],  ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[13], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][5]       ;
+; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|IR[4]      ; Stuck at GND              ; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[20], ;
+;                                                                 ; due to stuck port data_in ; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[8],  ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[12], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|regfile:RF|registers[0][4]       ;
+; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|IR[10]     ; Stuck at GND              ; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[6],  ;
+;                                                                 ; due to stuck port data_in ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[6],  ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[6]   ;
+; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|IR[9]      ; Stuck at GND              ; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[5],  ;
+;                                                                 ; due to stuck port data_in ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[5],  ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[5]   ;
+; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|IR[8]      ; Stuck at GND              ; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[4],  ;
+;                                                                 ; due to stuck port data_in ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[4],  ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[4]   ;
+; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|IR[13]     ; Stuck at GND              ; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[1],  ;
+;                                                                 ; due to stuck port data_in ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[1],  ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR|ex_wb_reg[1]   ;
+; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|IR[2]      ; Stuck at GND              ; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[18], ;
+;                                                                 ; due to stuck port data_in ; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[14], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[10]  ;
+; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|IR[1]      ; Stuck at GND              ; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[17], ;
+;                                                                 ; due to stuck port data_in ; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[13], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[9]   ;
+; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|IR[0]      ; Stuck at GND              ; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[16], ;
+;                                                                 ; due to stuck port data_in ; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[12], ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[8]   ;
+; risc_core_pl:RISC_PL|control_unit:CU|current_state~4            ; Lost Fanouts              ; risc_core_pl:RISC_PL|control_unit:CU|current_state.S_RST,         ;
+;                                                                 ;                           ; risc_core_pl:RISC_PL|control_unit:CU|current_state.S_NOR          ;
+; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|IR[14]     ; Stuck at GND              ; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[2],  ;
+;                                                                 ; due to stuck port data_in ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[2]   ;
+; risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU|IR[15]     ; Stuck at GND              ; risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR|if_id_reg[3],  ;
+;                                                                 ; due to stuck port data_in ; risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR|id_ex_reg[3]   ;
+; risc_core_pl:RISC_PL|control_unit:CU|current_state~5            ; Lost Fanouts              ; risc_core_pl:RISC_PL|control_unit:CU|current_state.S_STL          ;
++-----------------------------------------------------------------+---------------------------+-------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |risc_soc ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; imem_size      ; 64    ; Signed Integer                                  ;
+; dmem_size      ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: risc_core_pl:RISC_PL ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; imem_size      ; 64    ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: risc_core_pl:RISC_PL|control_unit:CU ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; imem_size      ; 64    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memory:IMEM ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; mem_size       ; 64    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memory:DMEM ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; mem_size       ; 32    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------+
+; Port Connectivity Checks: "memory:IMEM" ;
++-------+-------+----------+--------------+
+; Port  ; Type  ; Severity ; Details      ;
++-------+-------+----------+--------------+
+; wdata ; Input ; Info     ; Stuck at GND ;
+; wr    ; Input ; Info     ; Stuck at GND ;
++-------+-------+----------+--------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+; boundary_port         ; 3                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+    Info: Processing started: Sun Dec 17 16:32:13 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off risc_soc -c risc_soc
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /home/tanveer/risc/Pipelined/risc_soc.v
+    Info (12023): Found entity 1: risc_soc File: /home/tanveer/risc/Pipelined/risc_soc.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /home/tanveer/risc/Pipelined/risc_core.v
+    Info (12023): Found entity 1: risc_core_pl File: /home/tanveer/risc/Pipelined/risc_core.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /home/tanveer/risc/Pipelined/regfile.v
+    Info (12023): Found entity 1: regfile File: /home/tanveer/risc/Pipelined/regfile.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /home/tanveer/risc/Pipelined/memory.v
+    Info (12023): Found entity 1: memory File: /home/tanveer/risc/Pipelined/memory.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /home/tanveer/risc/Pipelined/inst_fetch_unit.v
+    Info (12023): Found entity 1: inst_fetch_unit File: /home/tanveer/risc/Pipelined/inst_fetch_unit.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /home/tanveer/risc/Pipelined/inst_decode_unit.v
+    Info (12023): Found entity 1: inst_decode_unit File: /home/tanveer/risc/Pipelined/inst_decode_unit.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /home/tanveer/risc/Pipelined/if_id_pl_reg.v
+    Info (12023): Found entity 1: if_id_pl_reg File: /home/tanveer/risc/Pipelined/if_id_pl_reg.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /home/tanveer/risc/Pipelined/id_ex_pl_reg.v
+    Info (12023): Found entity 1: id_ex_pl_reg File: /home/tanveer/risc/Pipelined/id_ex_pl_reg.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /home/tanveer/risc/Pipelined/exec_unit.v
+    Info (12023): Found entity 1: exec_unit File: /home/tanveer/risc/Pipelined/exec_unit.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /home/tanveer/risc/Pipelined/ex_wb_pl_reg.v
+    Info (12023): Found entity 1: ex_wb_pl_reg File: /home/tanveer/risc/Pipelined/ex_wb_pl_reg.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /home/tanveer/risc/Pipelined/datapath.v
+    Info (12023): Found entity 1: datapath File: /home/tanveer/risc/Pipelined/datapath.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /home/tanveer/risc/Pipelined/data_forwarding_unit.v
+    Info (12023): Found entity 1: data_forwarding_unit File: /home/tanveer/risc/Pipelined/data_forwarding_unit.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /home/tanveer/risc/Pipelined/control_unit.v
+    Info (12023): Found entity 1: control_unit File: /home/tanveer/risc/Pipelined/control_unit.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /home/tanveer/risc/Pipelined/arth_logic_unit.v
+    Info (12023): Found entity 1: arth_logic_unit File: /home/tanveer/risc/Pipelined/arth_logic_unit.v Line: 11
+Info (12127): Elaborating entity "risc_soc" for the top level hierarchy
+Info (12128): Elaborating entity "risc_core_pl" for hierarchy "risc_core_pl:RISC_PL" File: /home/tanveer/risc/Pipelined/risc_soc.v Line: 47
+Info (12128): Elaborating entity "control_unit" for hierarchy "risc_core_pl:RISC_PL|control_unit:CU" File: /home/tanveer/risc/Pipelined/risc_core.v Line: 66
+Info (12128): Elaborating entity "datapath" for hierarchy "risc_core_pl:RISC_PL|datapath:DU" File: /home/tanveer/risc/Pipelined/risc_core.v Line: 92
+Warning (10230): Verilog HDL assignment warning at datapath.v(76): truncated value with size 16 to match size of target (1) File: /home/tanveer/risc/Pipelined/datapath.v Line: 76
+Info (12128): Elaborating entity "inst_fetch_unit" for hierarchy "risc_core_pl:RISC_PL|datapath:DU|inst_fetch_unit:IFU" File: /home/tanveer/risc/Pipelined/datapath.v Line: 99
+Info (12128): Elaborating entity "if_id_pl_reg" for hierarchy "risc_core_pl:RISC_PL|datapath:DU|if_id_pl_reg:FDPR" File: /home/tanveer/risc/Pipelined/datapath.v Line: 118
+Info (12128): Elaborating entity "inst_decode_unit" for hierarchy "risc_core_pl:RISC_PL|datapath:DU|inst_decode_unit:IDU" File: /home/tanveer/risc/Pipelined/datapath.v Line: 133
+Warning (10036): Verilog HDL or VHDL warning at inst_decode_unit.v(26): object "alu_rs1_rdata" assigned a value but never read File: /home/tanveer/risc/Pipelined/inst_decode_unit.v Line: 26
+Warning (10036): Verilog HDL or VHDL warning at inst_decode_unit.v(27): object "alu_rs2_rdata" assigned a value but never read File: /home/tanveer/risc/Pipelined/inst_decode_unit.v Line: 27
+Info (12128): Elaborating entity "id_ex_pl_reg" for hierarchy "risc_core_pl:RISC_PL|datapath:DU|id_ex_pl_reg:DEPR" File: /home/tanveer/risc/Pipelined/datapath.v Line: 176
+Info (12128): Elaborating entity "exec_unit" for hierarchy "risc_core_pl:RISC_PL|datapath:DU|exec_unit:EXU" File: /home/tanveer/risc/Pipelined/datapath.v Line: 195
+Info (12128): Elaborating entity "arth_logic_unit" for hierarchy "risc_core_pl:RISC_PL|datapath:DU|exec_unit:EXU|arth_logic_unit:ALU" File: /home/tanveer/risc/Pipelined/exec_unit.v Line: 43
+Info (12128): Elaborating entity "ex_wb_pl_reg" for hierarchy "risc_core_pl:RISC_PL|datapath:DU|ex_wb_pl_reg:EWPR" File: /home/tanveer/risc/Pipelined/datapath.v Line: 214
+Info (12128): Elaborating entity "regfile" for hierarchy "risc_core_pl:RISC_PL|datapath:DU|regfile:RF" File: /home/tanveer/risc/Pipelined/datapath.v Line: 243
+Info (12128): Elaborating entity "data_forwarding_unit" for hierarchy "risc_core_pl:RISC_PL|datapath:DU|data_forwarding_unit:DFU" File: /home/tanveer/risc/Pipelined/datapath.v Line: 262
+Info (12128): Elaborating entity "memory" for hierarchy "memory:IMEM" File: /home/tanveer/risc/Pipelined/risc_soc.v Line: 61
+Info (12128): Elaborating entity "memory" for hierarchy "memory:DMEM" File: /home/tanveer/risc/Pipelined/risc_soc.v Line: 74
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "holt" is stuck at GND File: /home/tanveer/risc/Pipelined/risc_soc.v Line: 18
+Info (17049): 342 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk" File: /home/tanveer/risc/Pipelined/risc_soc.v Line: 13
+    Warning (15610): No output dependent on input pin "rst_n" File: /home/tanveer/risc/Pipelined/risc_soc.v Line: 14
+Info (21057): Implemented 3 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 1 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 430 megabytes
+    Info: Processing ended: Sun Dec 17 16:32:18 2023
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:12
+
+

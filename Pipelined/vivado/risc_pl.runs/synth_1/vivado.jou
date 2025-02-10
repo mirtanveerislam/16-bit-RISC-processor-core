@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Dec 17 17:11:06 2023
+# Process ID: 167870
+# Current directory: /home/tanveer/risc/Pipelined/vivado/risc_pl.runs/synth_1
+# Command line: vivado -log risc_soc_synth.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source risc_soc_synth.tcl
+# Log file: /home/tanveer/risc/Pipelined/vivado/risc_pl.runs/synth_1/risc_soc_synth.vds
+# Journal file: /home/tanveer/risc/Pipelined/vivado/risc_pl.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source risc_soc_synth.tcl -notrace

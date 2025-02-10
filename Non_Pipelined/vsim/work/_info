@@ -1,0 +1,348 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/tanveer/VSIMulation_projects
+T_opt
+!s110 1702845110
+VAIaeYa;YG0JfARbYGXDf=0
+04 7 4 work RISC_TB fast 0
+=1-000ae431a4f1-657f5ab6-c3cb8-24fb
+!s124 OEM10U13 
+o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+R1
+varth_logic_unit
+Z3 !s110 1702860079
+!i10b 1
+!s100 QhDW9iB>jGA?NS4;SJblD2
+I2hUR5B<QU:g@`VM1@E?Ak0
+Z4 d/home/tanveer/risc/Non_Pipelined/vsim
+w1701548788
+8/home/tanveer/risc/Non_Pipelined/arth_logic_unit.v
+F/home/tanveer/risc/Non_Pipelined/arth_logic_unit.v
+!i122 614
+L0 11 104
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2021.2;73
+r1
+!s85 0
+31
+Z7 !s108 1702860079.000000
+!s107 /home/tanveer/risc/Non_Pipelined/arth_logic_unit.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/tanveer/risc/Non_Pipelined/arth_logic_unit.v|
+!i113 0
+Z8 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vcontrol_unit
+R3
+!i10b 1
+!s100 d`m?8cG^g`=eW>H>0:Ke20
+IgAQ[g_z0N@MAgXP>kG6[d1
+R4
+w1702844715
+8/home/tanveer/risc/Non_Pipelined/control_unit.v
+F/home/tanveer/risc/Non_Pipelined/control_unit.v
+!i122 615
+L0 11 133
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 /home/tanveer/risc/Non_Pipelined/control_unit.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/tanveer/risc/Non_Pipelined/control_unit.v|
+!i113 0
+R8
+R2
+vdatapath
+R3
+!i10b 1
+!s100 JRHRKONHUleLN65XGkU=80
+I13keiTc:C=z8XI22@F]>Y0
+R4
+w1701721373
+8/home/tanveer/risc/Non_Pipelined/datapath.v
+F/home/tanveer/risc/Non_Pipelined/datapath.v
+!i122 616
+L0 11 118
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 /home/tanveer/risc/Non_Pipelined/datapath.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/tanveer/risc/Non_Pipelined/datapath.v|
+!i113 0
+R8
+R2
+vexec_unit
+R3
+!i10b 1
+!s100 dCjD@CKIcbOSBUSTEkQ^Y1
+I0@AfjaiW^aah_8DVU<`Qe0
+R4
+w1701548780
+8/home/tanveer/risc/Non_Pipelined/exec_unit.v
+F/home/tanveer/risc/Non_Pipelined/exec_unit.v
+!i122 617
+L0 11 60
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 /home/tanveer/risc/Non_Pipelined/exec_unit.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/tanveer/risc/Non_Pipelined/exec_unit.v|
+!i113 0
+R8
+R2
+vinst_decode_unit
+R3
+!i10b 1
+!s100 gPdk2O5H?kmDcB_YT:K_l0
+I__@F4LBF4K:76?bYRJPDS2
+R4
+w1701031341
+8/home/tanveer/risc/Non_Pipelined/inst_decode_unit.v
+F/home/tanveer/risc/Non_Pipelined/inst_decode_unit.v
+!i122 618
+L0 11 51
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 /home/tanveer/risc/Non_Pipelined/inst_decode_unit.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/tanveer/risc/Non_Pipelined/inst_decode_unit.v|
+!i113 0
+R8
+R2
+vinst_fetch_unit
+R3
+!i10b 1
+!s100 SVY`nHloLPEO=BASWdBoj0
+I<mU=nzWijLBc;[RFcOTgW3
+R4
+w1701721338
+8/home/tanveer/risc/Non_Pipelined/inst_fetch_unit.v
+F/home/tanveer/risc/Non_Pipelined/inst_fetch_unit.v
+!i122 619
+L0 11 65
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 /home/tanveer/risc/Non_Pipelined/inst_fetch_unit.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/tanveer/risc/Non_Pipelined/inst_fetch_unit.v|
+!i113 0
+R8
+R2
+vmemory
+R3
+!i10b 1
+!s100 BGJnDJ9O]U3FV[8:HTgWm1
+IF9kEVVWcU]OaBCAZfPR6@2
+R4
+w1701547808
+8/home/tanveer/risc/Non_Pipelined/memory.v
+F/home/tanveer/risc/Non_Pipelined/memory.v
+!i122 620
+L0 11 27
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 /home/tanveer/risc/Non_Pipelined/memory.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/tanveer/risc/Non_Pipelined/memory.v|
+!i113 0
+R8
+R2
+vregfile
+R3
+!i10b 1
+!s100 4SYz_mN6hUPbPlV`F@_1l1
+IA0Be_M1Ed[a?kkY85Jg;l3
+R4
+w1701671281
+Z9 8/home/tanveer/risc/Non_Pipelined/regfile.v
+Z10 F/home/tanveer/risc/Non_Pipelined/regfile.v
+!i122 621
+L0 11 35
+R5
+R6
+r1
+!s85 0
+31
+R7
+Z11 !s107 /home/tanveer/risc/Non_Pipelined/regfile.v|
+Z12 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/tanveer/risc/Non_Pipelined/regfile.v|
+!i113 0
+R8
+R2
+vregfile_ff
+!s110 1701667405
+!i10b 1
+!s100 C=bS9HkLZg^lJFAPV]bYO3
+INVQZSgnm;CD=nJfnfmV1?1
+R4
+w1701655015
+R9
+R10
+!i122 247
+L0 47 274
+R5
+R6
+r1
+!s85 0
+31
+!s108 1701667405.000000
+R11
+R12
+!i113 0
+R8
+R2
+vrisc_core_np
+Z13 !s110 1702860080
+!i10b 1
+!s100 UC5d]S=7Uz<M1KOk3SQ^<1
+IP?>1CIB_F1=F?@Rd9@8^j2
+R4
+w1702857015
+8/home/tanveer/risc/Non_Pipelined/risc_core.v
+F/home/tanveer/risc/Non_Pipelined/risc_core.v
+!i122 622
+L0 11 75
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 /home/tanveer/risc/Non_Pipelined/risc_core.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/tanveer/risc/Non_Pipelined/risc_core.v|
+!i113 0
+R8
+R2
+vrisc_soc
+R13
+!i10b 1
+!s100 Zg<123<j=mZ@8]g4AbKgA2
+I@>K`J2CaA>?Cc>5j0SD][1
+R4
+w1702844034
+8/home/tanveer/risc/Non_Pipelined/risc_soc.v
+F/home/tanveer/risc/Non_Pipelined/risc_soc.v
+!i122 623
+L0 11 66
+R5
+R6
+r1
+!s85 0
+31
+Z14 !s108 1702860080.000000
+!s107 /home/tanveer/risc/Non_Pipelined/risc_soc.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/tanveer/risc/Non_Pipelined/risc_soc.v|
+!i113 0
+R8
+R2
+vRISC_TB
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R13
+!i10b 1
+!s100 VYj3J:2RRnl92Ji0ih0aW1
+IZ1Z@Hcl5eR=mf;XC2_=jF2
+S1
+R4
+w1702757034
+8/home/tanveer/risc/Non_Pipelined/vsim/risc_tb.sv
+F/home/tanveer/risc/Non_Pipelined/vsim/risc_tb.sv
+!i122 625
+L0 11 45
+R5
+R6
+r1
+!s85 0
+31
+R14
+!s107 /home/tanveer/risc/Non_Pipelined/vsim/risc_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/home/tanveer/risc/Non_Pipelined/vsim/risc_tb.sv|
+!i113 0
+o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+n@r@i@s@c_@t@b
+vsignextender
+R13
+!i10b 1
+!s100 b<ZzSdD>W?VE2I]KGTO>23
+IM8baoXb6PQnCPf4EA=2[?3
+R4
+w1701571728
+8/home/tanveer/risc/Non_Pipelined/signextender.v
+F/home/tanveer/risc/Non_Pipelined/signextender.v
+!i122 624
+L0 11 26
+R5
+R6
+r1
+!s85 0
+31
+R14
+!s107 /home/tanveer/risc/Non_Pipelined/signextender.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/tanveer/risc/Non_Pipelined/signextender.v|
+!i113 0
+R8
+R2

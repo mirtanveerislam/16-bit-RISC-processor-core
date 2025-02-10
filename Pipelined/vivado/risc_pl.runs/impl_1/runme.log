@@ -1,0 +1,1629 @@
+
+*** Running vivado
+    with args -log risc_soc_synth.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source risc_soc_synth.tcl -notrace
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source risc_soc_synth.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/tanveer/PYNQ/YOLO_Tiny/code/test/ip_example'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.1/data/ip'.
+Command: link_design -top risc_soc_synth -part xc7z020clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint '/home/tanveer/risc/Pipelined/vivado/risc_pl.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'DMEM'
+INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/tanveer/risc/Pipelined/vivado/risc_pl.srcs/constrs_1/new/const.xdc]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Site location is not valid [/home/tanveer/risc/Pipelined/vivado/risc_pl.srcs/constrs_1/new/const.xdc:2]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Site location is not valid [/home/tanveer/risc/Pipelined/vivado/risc_pl.srcs/constrs_1/new/const.xdc:6]
+CRITICAL WARNING: [Common 17-69] Command failed: 'R12' is not a valid site or package pin name. [/home/tanveer/risc/Pipelined/vivado/risc_pl.srcs/constrs_1/new/const.xdc:27]
+Finished Parsing XDC File [/home/tanveer/risc/Pipelined/vivado/risc_pl.srcs/constrs_1/new/const.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1628.621 ; gain = 0.000 ; free physical = 6894 ; free virtual = 13154
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 7 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 7 instances
+
+11 Infos, 0 Warnings, 3 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+Command: opt_design -directive Explore
+INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.88 . Memory (MB): peak = 1781.902 ; gain = 153.281 ; free physical = 6854 ; free virtual = 13113
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: ecc14148
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2162.871 ; gain = 380.969 ; free physical = 6436 ; free virtual = 12712
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 11689193e
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2276.840 ; gain = 0.000 ; free physical = 6369 ; free virtual = 12645
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 1 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 11689193e
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2276.840 ; gain = 0.000 ; free physical = 6369 ; free virtual = 12645
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 8c691169
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2276.840 ; gain = 0.000 ; free physical = 6368 ; free virtual = 12645
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 8c691169
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2276.840 ; gain = 0.000 ; free physical = 6368 ; free virtual = 12645
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 8c691169
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2276.840 ; gain = 0.000 ; free physical = 6368 ; free virtual = 12645
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 8c691169
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2276.840 ; gain = 0.000 ; free physical = 6368 ; free virtual = 12645
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               1  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2276.840 ; gain = 0.000 ; free physical = 6368 ; free virtual = 12645
+Ending Logic Optimization Task | Checksum: d9eff250
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2276.840 ; gain = 0.000 ; free physical = 6368 ; free virtual = 12645
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.204 | TNS=-7.017 |
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 2 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 2 Total Ports: 4
+Ending PowerOpt Patch Enables Task | Checksum: 10b5a0bb1
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2480.613 ; gain = 0.000 ; free physical = 6347 ; free virtual = 12623
+Ending Power Optimization Task | Checksum: 10b5a0bb1
+
+Time (s): cpu = 00:00:00.33 ; elapsed = 00:00:00.29 . Memory (MB): peak = 2480.613 ; gain = 203.773 ; free physical = 6354 ; free virtual = 12631
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 117022f61
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2480.613 ; gain = 0.000 ; free physical = 6346 ; free virtual = 12624
+Ending Final Cleanup Task | Checksum: 117022f61
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2480.613 ; gain = 0.000 ; free physical = 6345 ; free virtual = 12623
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2480.613 ; gain = 0.000 ; free physical = 6345 ; free virtual = 12623
+Ending Netlist Obfuscation Task | Checksum: 117022f61
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2480.613 ; gain = 0.000 ; free physical = 6345 ; free virtual = 12623
+INFO: [Common 17-83] Releasing license: Implementation
+36 Infos, 0 Warnings, 3 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2480.613 ; gain = 851.992 ; free physical = 6345 ; free virtual = 12624
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2480.613 ; gain = 0.000 ; free physical = 6345 ; free virtual = 12624
+INFO: [Timing 38-480] Writing timing data to binary archive.
+INFO: [Common 17-1381] The checkpoint '/home/tanveer/risc/Pipelined/vivado/risc_pl.runs/impl_1/risc_soc_synth_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file risc_soc_synth_drc_opted.rpt -pb risc_soc_synth_drc_opted.pb -rpx risc_soc_synth_drc_opted.rpx
+Command: report_drc -file risc_soc_synth_drc_opted.rpt -pb risc_soc_synth_drc_opted.pb -rpx risc_soc_synth_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/tanveer/risc/Pipelined/vivado/risc_pl.runs/impl_1/risc_soc_synth_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1840 rule limit reached: 20 violations have been found.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[5]) which is driven by a register (RISC_PL/DU/DEPR/id_ex_reg_reg[29]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[5] (net: DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[0]) which is driven by a register (RISC_PL/DU/DEPR/id_ex_reg_reg[24]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[6] (net: DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[1]) which is driven by a register (RISC_PL/DU/DEPR/id_ex_reg_reg[25]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[7] (net: DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[2]) which is driven by a register (RISC_PL/DU/DEPR/id_ex_reg_reg[26]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[8] (net: DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[3]) which is driven by a register (RISC_PL/DU/DEPR/id_ex_reg_reg[27]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[9] (net: DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[4]) which is driven by a register (RISC_PL/DU/DEPR/id_ex_reg_reg[28]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRBWRADDR[10] (net: DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[5]) which is driven by a register (RISC_PL/DU/DEPR/id_ex_reg_reg[29]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRBWRADDR[5] (net: DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[0]) which is driven by a register (RISC_PL/DU/DEPR/id_ex_reg_reg[24]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRBWRADDR[6] (net: DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[1]) which is driven by a register (RISC_PL/DU/DEPR/id_ex_reg_reg[25]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRBWRADDR[7] (net: DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[2]) which is driven by a register (RISC_PL/DU/DEPR/id_ex_reg_reg[26]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRBWRADDR[8] (net: DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[3]) which is driven by a register (RISC_PL/DU/DEPR/id_ex_reg_reg[27]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRBWRADDR[9] (net: DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/addra[4]) which is driven by a register (RISC_PL/DU/DEPR/id_ex_reg_reg[28]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ENARDEN (net: DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_ENARDEN_cooolgate_en_sig_1) which is driven by a register (RISC_PL/DU/DEPR/id_ex_reg_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ENARDEN (net: DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_ENARDEN_cooolgate_en_sig_1) which is driven by a register (RISC_PL/DU/DEPR/id_ex_reg_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ENARDEN (net: DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_ENARDEN_cooolgate_en_sig_1) which is driven by a register (RISC_PL/DU/DEPR/id_ex_reg_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ENARDEN (net: DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_ENARDEN_cooolgate_en_sig_1) which is driven by a register (RISC_PL/DU/DEPR/id_ex_reg_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ENARDEN (net: DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_ENARDEN_cooolgate_en_sig_1) which is driven by a register (RISC_PL/DU/FDPR/if_id_reg_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ENBWREN (net: DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_ENBWREN_cooolgate_en_sig_2) which is driven by a register (RISC_PL/DU/DEPR/id_ex_reg_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ENBWREN (net: DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_ENBWREN_cooolgate_en_sig_2) which is driven by a register (RISC_PL/DU/DEPR/id_ex_reg_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ENBWREN (net: DMEM/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_ENBWREN_cooolgate_en_sig_2) which is driven by a register (RISC_PL/DU/DEPR/id_ex_reg_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 21 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 46-5] The placer was invoked with the 'Explore' directive.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2512.629 ; gain = 0.000 ; free physical = 6332 ; free virtual = 12611
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 2e4ab6ee
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2512.629 ; gain = 0.000 ; free physical = 6332 ; free virtual = 12611
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2512.629 ; gain = 0.000 ; free physical = 6332 ; free virtual = 12611
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 12ae27695
+
+Time (s): cpu = 00:00:00.46 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2528.637 ; gain = 16.008 ; free physical = 6332 ; free virtual = 12611
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 151cdc572
+
+Time (s): cpu = 00:00:00.80 ; elapsed = 00:00:00.24 . Memory (MB): peak = 2560.652 ; gain = 48.023 ; free physical = 6331 ; free virtual = 12611
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 151cdc572
+
+Time (s): cpu = 00:00:00.80 ; elapsed = 00:00:00.24 . Memory (MB): peak = 2560.652 ; gain = 48.023 ; free physical = 6331 ; free virtual = 12611
+Phase 1 Placer Initialization | Checksum: 151cdc572
+
+Time (s): cpu = 00:00:00.81 ; elapsed = 00:00:00.24 . Memory (MB): peak = 2560.652 ; gain = 48.023 ; free physical = 6331 ; free virtual = 12611
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 19e923eea
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.28 . Memory (MB): peak = 2560.652 ; gain = 48.023 ; free physical = 6329 ; free virtual = 12609
+
+Phase 2.2 Global Placement Core
+
+Phase 2.2.1 Physical Synthesis In Placer
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6310 ; free virtual = 12590
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Very High Fanout              |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  HD Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                         |            0  |              0  |                     0  |           0  |           5  |  00:00:00  |
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: b02f7f5a
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 2568.656 ; gain = 56.027 ; free physical = 6310 ; free virtual = 12590
+Phase 2.2 Global Placement Core | Checksum: 129e308aa
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:01 . Memory (MB): peak = 2568.656 ; gain = 56.027 ; free physical = 6309 ; free virtual = 12589
+Phase 2 Global Placement | Checksum: 129e308aa
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:01 . Memory (MB): peak = 2568.656 ; gain = 56.027 ; free physical = 6309 ; free virtual = 12589
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 13e4922f9
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:01 . Memory (MB): peak = 2568.656 ; gain = 56.027 ; free physical = 6308 ; free virtual = 12588
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 185b42e7b
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:01 . Memory (MB): peak = 2568.656 ; gain = 56.027 ; free physical = 6305 ; free virtual = 12585
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 22d7e3b94
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:01 . Memory (MB): peak = 2568.656 ; gain = 56.027 ; free physical = 6305 ; free virtual = 12585
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 151d0efe8
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:01 . Memory (MB): peak = 2568.656 ; gain = 56.027 ; free physical = 6305 ; free virtual = 12585
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 1d2e3be4a
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:01 . Memory (MB): peak = 2568.656 ; gain = 56.027 ; free physical = 6304 ; free virtual = 12584
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 1f0a5bf4d
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:01 . Memory (MB): peak = 2568.656 ; gain = 56.027 ; free physical = 6304 ; free virtual = 12584
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 13b15130a
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:01 . Memory (MB): peak = 2568.656 ; gain = 56.027 ; free physical = 6304 ; free virtual = 12584
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 137d46a43
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:01 . Memory (MB): peak = 2568.656 ; gain = 56.027 ; free physical = 6304 ; free virtual = 12584
+Phase 3 Detail Placement | Checksum: 137d46a43
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:01 . Memory (MB): peak = 2568.656 ; gain = 56.027 ; free physical = 6304 ; free virtual = 12584
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: f0c1b857
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Phase 4.1.1.1 BUFG Insertion | Checksum: f0c1b857
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 2568.656 ; gain = 56.027 ; free physical = 6303 ; free virtual = 12584
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.248. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 10631fe85
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:49 . Memory (MB): peak = 2568.656 ; gain = 56.027 ; free physical = 6414 ; free virtual = 12687
+Phase 4.1 Post Commit Optimization | Checksum: 10631fe85
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:49 . Memory (MB): peak = 2568.656 ; gain = 56.027 ; free physical = 6414 ; free virtual = 12687
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 10631fe85
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:49 . Memory (MB): peak = 2568.656 ; gain = 56.027 ; free physical = 6414 ; free virtual = 12687
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 10631fe85
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:49 . Memory (MB): peak = 2568.656 ; gain = 56.027 ; free physical = 6414 ; free virtual = 12687
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6414 ; free virtual = 12687
+Phase 4.4 Final Placement Cleanup | Checksum: f6685ddf
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:49 . Memory (MB): peak = 2568.656 ; gain = 56.027 ; free physical = 6414 ; free virtual = 12687
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: f6685ddf
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:49 . Memory (MB): peak = 2568.656 ; gain = 56.027 ; free physical = 6414 ; free virtual = 12687
+Ending Placer Task | Checksum: 457dbc20
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:49 . Memory (MB): peak = 2568.656 ; gain = 56.027 ; free physical = 6414 ; free virtual = 12687
+INFO: [Common 17-83] Releasing license: Implementation
+67 Infos, 21 Warnings, 3 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:55 ; elapsed = 00:00:50 . Memory (MB): peak = 2568.656 ; gain = 56.027 ; free physical = 6428 ; free virtual = 12701
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6428 ; free virtual = 12701
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6426 ; free virtual = 12701
+INFO: [Common 17-1381] The checkpoint '/home/tanveer/risc/Pipelined/vivado/risc_pl.runs/impl_1/risc_soc_synth_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file risc_soc_synth_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6431 ; free virtual = 12705
+INFO: [runtcl-4] Executing : report_utilization -file risc_soc_synth_utilization_placed.rpt -pb risc_soc_synth_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file risc_soc_synth_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6446 ; free virtual = 12720
+Command: phys_opt_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: Explore
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6418 ; free virtual = 12691
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.248 | TNS=-3.055 |
+Phase 1 Physical Synthesis Initialization | Checksum: 20726f924
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.39 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6395 ; free virtual = 12670
+
+Phase 2 Slr Crossing Optimization
+Phase 2 Slr Crossing Optimization | Checksum: 20726f924
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.49 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6394 ; free virtual = 12670
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.248 | TNS=-3.055 |
+
+Phase 3 Fanout Optimization
+INFO: [Physopt 32-64] No nets found for fanout-optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 3 Fanout Optimization | Checksum: 20726f924
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.50 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6390 ; free virtual = 12667
+
+Phase 4 Placement Based Optimization
+INFO: [Physopt 32-660] Identified 80 candidate nets for placement-based optimization.
+INFO: [Physopt 32-663] Processed net RISC_PL/DU/DEPR/li_lw[14].  Re-placed instance RISC_PL/DU/DEPR/id_ex_reg[54]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[38]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[22].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[38]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[55]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[55]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[39].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[55]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[39]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[23].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[39]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[5].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[45]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[5].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[45]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[29].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[45]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[52]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[36]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[52]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[20].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[36]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[36].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[52]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[51]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[35]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[51]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[19].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[35]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[35].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[51]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[2].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[42]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[2].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[42]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[26].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[42]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[2].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[26]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[10].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[26]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[40]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[24]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[24]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[40]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[24].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[40]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[10].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[50]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[10].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[34]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[18].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[34]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[41]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[25].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[41]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[41]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[48]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[48]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[32].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[48]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[25]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[25]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[54]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[38].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[54]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[53]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[53]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[37].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[53]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[46]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[46]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[30].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[46]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[30]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[30]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[5].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[29]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[29]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[44]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[28].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[44]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[44]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[28]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[28]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[47]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[31]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[31]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[47]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[31].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[47]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[49]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[33]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[17].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[33]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[49]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[33].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[49]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[32]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[16].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[32]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[3].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[43]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[3].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[43]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[27].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[43]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[3].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[27]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[27]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[10].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[50]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[34].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[50]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[37]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[21].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[37]
+INFO: [Physopt 32-661] Optimized 1 net.  Re-placed 1 instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 1 net or cell. Created 0 new cell, deleted 0 existing cell and moved 1 existing cell
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.246 | TNS=-3.186 |
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6348 ; free virtual = 12637
+Phase 4 Placement Based Optimization | Checksum: 26022d742
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:04 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6348 ; free virtual = 12637
+
+Phase 5 MultiInst Placement Optimization
+INFO: [Physopt 32-660] Identified 80 candidate nets for placement-based optimization.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[55]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[55]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[39]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[5].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[45]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[5].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[45]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[54]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[38]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[52]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[36]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[52]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[54]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[51]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[35]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[51]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[2].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[42]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[2].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[42]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[2].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[26]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[40]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[24]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[40]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[10].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[50]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[10].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[34]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[41]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[41]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[48]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[48]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[25]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[53]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[53]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[46]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[46]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[30]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[5].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[29]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[44]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[44]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[28]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[47]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[31]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[47]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[49]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[33]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[49]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[32]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[3].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[43]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[3].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[43]_i_1/O
+INFO: [Physopt 32-661] Optimized 0 net.  Re-placed 0 instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6332 ; free virtual = 12615
+Phase 5 MultiInst Placement Optimization | Checksum: 1c2c68e5d
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:06 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6332 ; free virtual = 12615
+
+Phase 6 Rewire
+INFO: [Physopt 32-246] Starting Signal Push optimization...
+INFO: [Physopt 32-241] No nets found for rewiring () optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6332 ; free virtual = 12615
+Phase 6 Rewire | Checksum: 1c2c68e5d
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:06 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6332 ; free virtual = 12615
+
+Phase 7 Critical Cell Optimization
+INFO: [Physopt 32-46] Identified 16 candidate nets for critical-cell optimization.
+INFO: [Physopt 32-572] Net RISC_PL/DU/DEPR/li_lw[15] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net RISC_PL/DU/DEPR/li_lw[5] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net RISC_PL/DU/DEPR/li_lw[14] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net RISC_PL/DU/DEPR/li_lw[12] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net RISC_PL/DU/DEPR/li_lw[11] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net RISC_PL/DU/DEPR/li_lw[2] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net RISC_PL/DU/DEPR/li_lw[0] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net RISC_PL/DU/DEPR/li_lw[10] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net RISC_PL/DU/DEPR/li_lw[1] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net RISC_PL/DU/DEPR/li_lw[8] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net RISC_PL/DU/DEPR/li_lw[13] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net RISC_PL/DU/DEPR/li_lw[6] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net RISC_PL/DU/DEPR/li_lw[4] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net RISC_PL/DU/DEPR/li_lw[7] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net RISC_PL/DU/DEPR/li_lw[9] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net RISC_PL/DU/DEPR/li_lw[3] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6340 ; free virtual = 12624
+Phase 7 Critical Cell Optimization | Checksum: 1c3467d03
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:07 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6340 ; free virtual = 12624
+
+Phase 8 Fanout Optimization
+INFO: [Physopt 32-64] No nets found for fanout-optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 8 Fanout Optimization | Checksum: 1c3467d03
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:07 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6340 ; free virtual = 12623
+
+Phase 9 Placement Based Optimization
+INFO: [Physopt 32-660] Identified 80 candidate nets for placement-based optimization.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[55]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[55]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[39].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[55]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[39]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[23].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[39]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[5].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[45]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[5].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[45]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[29].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[45]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[54]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[38]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[22].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[38]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[52]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[36]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[52]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[20].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[36]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[36].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[52]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[54]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[38].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[54]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[51]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[35]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[51]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[19].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[35]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[35].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[51]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[2].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[42]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[2].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[42]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[26].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[42]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[2].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[26]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[10].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[26]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[40]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[24]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[24]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[40]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[24].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[40]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[10].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[50]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[10].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[34]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[18].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[34]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[41]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[25].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[41]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[41]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[48]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[48]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[32].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[48]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[25]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[25]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[53]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[53]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[37].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[53]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[46]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[46]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[30].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[46]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[30]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[30]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[5].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[29]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[29]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[44]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[28].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[44]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[44]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[28]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[28]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[47]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[31]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[31]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[47]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[31].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[47]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[49]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[33]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[17].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[33]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[49]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[33].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[49]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[32]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[16].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[32]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[3].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[43]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[3].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[43]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[27].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[43]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[3].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[27]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[27]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[10].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[50]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[34].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[50]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[37]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[21].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[37]
+INFO: [Physopt 32-661] Optimized 0 net.  Re-placed 0 instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6337 ; free virtual = 12630
+Phase 9 Placement Based Optimization | Checksum: 20ddf0313
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:10 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6337 ; free virtual = 12630
+
+Phase 10 MultiInst Placement Optimization
+INFO: [Physopt 32-660] Identified 80 candidate nets for placement-based optimization.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[55]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[55]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[39]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[5].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[45]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[5].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[45]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[54]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[38]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[52]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[36]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[52]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[54]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[51]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[35]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[51]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[2].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[42]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[2].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[42]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[2].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[26]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[40]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[24]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[40]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[10].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[50]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[10].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[34]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[41]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[41]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[48]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[48]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[25]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[53]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[53]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[46]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[46]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[30]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[5].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[29]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[44]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[44]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[28]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[47]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[31]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[47]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[49]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[33]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[49]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[32]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[3].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[43]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[3].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[43]_i_1/O
+INFO: [Physopt 32-661] Optimized 0 net.  Re-placed 0 instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6350 ; free virtual = 12636
+Phase 10 MultiInst Placement Optimization | Checksum: 1e8e5db7c
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:00:13 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6350 ; free virtual = 12636
+
+Phase 11 Rewire
+INFO: [Physopt 32-246] Starting Signal Push optimization...
+INFO: [Physopt 32-241] No nets found for rewiring () optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6350 ; free virtual = 12636
+Phase 11 Rewire | Checksum: 1e8e5db7c
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:00:13 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6350 ; free virtual = 12636
+
+Phase 12 Critical Cell Optimization
+INFO: [Physopt 32-68] No nets found for critical-cell optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 12 Critical Cell Optimization | Checksum: 1e8e5db7c
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:00:13 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6350 ; free virtual = 12636
+
+Phase 13 Slr Crossing Optimization
+Phase 13 Slr Crossing Optimization | Checksum: 1e8e5db7c
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:00:13 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6350 ; free virtual = 12636
+
+Phase 14 Fanout Optimization
+INFO: [Physopt 32-64] No nets found for fanout-optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 14 Fanout Optimization | Checksum: 1e8e5db7c
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:00:13 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6350 ; free virtual = 12636
+
+Phase 15 Placement Based Optimization
+INFO: [Physopt 32-660] Identified 80 candidate nets for placement-based optimization.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[55]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[55]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[39].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[55]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[39]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[23].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[39]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[5].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[45]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[5].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[45]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[29].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[45]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[54]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[38]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[22].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[38]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[52]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[36]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[52]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[20].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[36]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[36].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[52]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[54]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[38].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[54]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[51]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[35]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[51]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[19].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[35]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[35].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[51]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[2].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[42]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[2].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[42]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[26].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[42]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[2].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[26]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[10].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[26]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[40]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[24]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[24]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[40]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[24].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[40]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[10].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[50]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[10].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[34]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[18].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[34]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[41]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[25].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[41]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[41]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[48]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[48]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[32].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[48]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[25]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[25]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[53]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[53]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[37].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[53]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[46]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[46]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[30].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[46]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[30]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[30]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[5].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[29]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[29]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[44]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[28].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[44]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[44]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[28]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[28]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[47]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[31]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[31]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[47]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[31].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[47]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[49]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[33]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[17].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[33]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[49]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[33].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[49]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[32]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[16].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[32]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[3].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[43]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[3].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[43]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[27].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[43]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[3].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[27]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[27]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[10].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[50]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[34].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[50]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[37]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[21].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[37]
+INFO: [Physopt 32-661] Optimized 0 net.  Re-placed 0 instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6345 ; free virtual = 12631
+Phase 15 Placement Based Optimization | Checksum: 20ddf0313
+
+Time (s): cpu = 00:01:29 ; elapsed = 00:00:14 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6345 ; free virtual = 12631
+
+Phase 16 MultiInst Placement Optimization
+INFO: [Physopt 32-660] Identified 80 candidate nets for placement-based optimization.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[55]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[55]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[39]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[5].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[45]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[5].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[45]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[54]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[38]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[52]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[36]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[52]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[54]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[51]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[35]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[51]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[2].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[42]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[2].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[42]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[2].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[26]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[40]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[24]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[40]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[10].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[50]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[10].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[34]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[41]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[41]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[48]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[48]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[25]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[53]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[53]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[46]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[46]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[30]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[5].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[29]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[44]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[44]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[28]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[47]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[31]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[47]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[49]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[33]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[49]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[32]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[3].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[43]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[3].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[43]_i_1/O
+INFO: [Physopt 32-661] Optimized 0 net.  Re-placed 0 instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6347 ; free virtual = 12636
+Phase 16 MultiInst Placement Optimization | Checksum: 1e8e5db7c
+
+Time (s): cpu = 00:01:41 ; elapsed = 00:00:16 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6347 ; free virtual = 12636
+
+Phase 17 Rewire
+INFO: [Physopt 32-246] Starting Signal Push optimization...
+INFO: [Physopt 32-241] No nets found for rewiring () optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6347 ; free virtual = 12636
+Phase 17 Rewire | Checksum: 1e8e5db7c
+
+Time (s): cpu = 00:01:41 ; elapsed = 00:00:16 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6347 ; free virtual = 12636
+
+Phase 18 Critical Cell Optimization
+INFO: [Physopt 32-68] No nets found for critical-cell optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 18 Critical Cell Optimization | Checksum: 1e8e5db7c
+
+Time (s): cpu = 00:01:41 ; elapsed = 00:00:16 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6347 ; free virtual = 12636
+
+Phase 19 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 19 DSP Register Optimization | Checksum: 1e8e5db7c
+
+Time (s): cpu = 00:01:41 ; elapsed = 00:00:16 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6347 ; free virtual = 12636
+
+Phase 20 BRAM Register Optimization
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 20 BRAM Register Optimization | Checksum: 1e8e5db7c
+
+Time (s): cpu = 00:01:41 ; elapsed = 00:00:16 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6348 ; free virtual = 12636
+
+Phase 21 URAM Register Optimization
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 21 URAM Register Optimization | Checksum: 1e8e5db7c
+
+Time (s): cpu = 00:01:41 ; elapsed = 00:00:16 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6348 ; free virtual = 12636
+
+Phase 22 Shift Register Optimization
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 22 Shift Register Optimization | Checksum: 1e8e5db7c
+
+Time (s): cpu = 00:01:41 ; elapsed = 00:00:16 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6348 ; free virtual = 12636
+
+Phase 23 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 23 DSP Register Optimization | Checksum: 1e8e5db7c
+
+Time (s): cpu = 00:01:41 ; elapsed = 00:00:16 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6348 ; free virtual = 12636
+
+Phase 24 BRAM Register Optimization
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 24 BRAM Register Optimization | Checksum: 1e8e5db7c
+
+Time (s): cpu = 00:01:41 ; elapsed = 00:00:16 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6348 ; free virtual = 12636
+
+Phase 25 URAM Register Optimization
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 25 URAM Register Optimization | Checksum: 1e8e5db7c
+
+Time (s): cpu = 00:01:41 ; elapsed = 00:00:16 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6348 ; free virtual = 12636
+
+Phase 26 Shift Register Optimization
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 26 Shift Register Optimization | Checksum: 1e8e5db7c
+
+Time (s): cpu = 00:01:41 ; elapsed = 00:00:16 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6348 ; free virtual = 12636
+
+Phase 27 Critical Pin Optimization
+INFO: [Physopt 32-606] Identified 17 candidate nets for critical-pin optimization.
+INFO: [Physopt 32-608] Optimized 17 nets.  Swapped 228 pins.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 17 nets or cells. Created 0 new cell, deleted 0 existing cell and moved 228 existing cells
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.098 | TNS=-0.913 |
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6348 ; free virtual = 12636
+Phase 27 Critical Pin Optimization | Checksum: 1e8e5db7c
+
+Time (s): cpu = 00:01:41 ; elapsed = 00:00:16 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6348 ; free virtual = 12636
+
+Phase 28 Very High Fanout Optimization
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 28 Very High Fanout Optimization | Checksum: 1e8e5db7c
+
+Time (s): cpu = 00:01:41 ; elapsed = 00:00:16 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6348 ; free virtual = 12636
+
+Phase 29 Placement Based Optimization
+INFO: [Physopt 32-660] Identified 107 candidate nets for placement-based optimization.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[40]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[24]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[24]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[24].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[40]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[40]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[10].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[50]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[10].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[34]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[18].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[34]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[41]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[25].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[41]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[41]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[48]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[48]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[32].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[48]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[25]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[25]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[53]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[53]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[37].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[53]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[46]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[46]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[30].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[46]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[30]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[30]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[44]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[28].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[44]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[44]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[28]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[28]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[47]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[31]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[31]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[47]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[31].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[47]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[52]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[52]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[36].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[52]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[49]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[33]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[17].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[33]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[49]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[33].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[49]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[32]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[16].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[32]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[3].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[43]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[3].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[43]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[27].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[43]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[3].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[27]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[27]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[55]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[55]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[39].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[55]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/EXU/ALU/rslt_r__99[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[55]_i_3
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_ex_reg_reg[47]_0[0].  Did not re-place instance RISC_PL/DU/DEPR/i__carry__0_i_4
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[10].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[50]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[34].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[50]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/S[1].  Did not re-place instance RISC_PL/DU/DEPR/i__carry_i_3
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/EXU/ALU/rslt_r__99[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[52]_i_3
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[36]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[20].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[36]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[15].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[39]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[23].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[39]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[37]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[21].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[37]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/EXU/ALU/rslt_r__99[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[54]_i_3
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[38]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[22].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[38]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[54]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[51]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[35]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[11].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[51]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[19].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[35]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[35].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[51]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/EWPR/E[0].  Did not re-place instance RISC_PL/DU/EWPR/PC[15]_i_1
+INFO: [Physopt 32-663] Processed net RISC_PL/DU/IFU/IR_reg[15]_0[9].  Re-placed instance RISC_PL/DU/IFU/IR_reg[9]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/pc_load1.  Did not re-place instance RISC_PL/DU/DEPR/PC[15]_i_4
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/EWPR/rs_less_zero.  Did not re-place instance RISC_PL/DU/EWPR/PC[15]_i_11
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/IFU/Q[5].  Did not re-place instance RISC_PL/DU/IFU/PC_reg[5]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/IFU/Q[7].  Did not re-place instance RISC_PL/DU/IFU/PC_reg[7]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/IFU/Q[9].  Did not re-place instance RISC_PL/DU/IFU/PC_reg[9]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/IFU/Q[11].  Did not re-place instance RISC_PL/DU/IFU/PC_reg[11]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/IFU/Q[3].  Did not re-place instance RISC_PL/DU/IFU/PC_reg[3]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/IFU/Q[12].  Did not re-place instance RISC_PL/DU/IFU/PC_reg[12]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/IFU/Q[15].  Did not re-place instance RISC_PL/DU/IFU/PC_reg[15]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[14].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[54]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[38].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[54]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/IFU/Q[6].  Did not re-place instance RISC_PL/DU/IFU/PC_reg[6]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/IFU/Q[8].  Did not re-place instance RISC_PL/DU/IFU/PC_reg[8]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/IFU/Q[13].  Did not re-place instance RISC_PL/DU/IFU/PC_reg[13]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/IFU/Q[10].  Did not re-place instance RISC_PL/DU/IFU/PC_reg[10]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[29].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[45]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_ex_reg_reg[47]_0[1].  Did not re-place instance RISC_PL/DU/DEPR/i__carry__0_i_3
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[5].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[45]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[5].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[29]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/Q[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg_reg[29]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/EXU/ALU/rslt_r__99[5].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[45]_i_3
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/D[5].  Did not re-place instance RISC_PL/DU/DEPR/ex_wb_reg[13]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/EWPR/Q[9].  Did not re-place instance RISC_PL/DU/EWPR/ex_wb_reg_reg[13]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/D[14].  Did not re-place instance RISC_PL/DU/DEPR/ex_wb_reg[22]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/EWPR/Q[18].  Did not re-place instance RISC_PL/DU/EWPR/ex_wb_reg_reg[22]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/EXU/ALU/rslt_r__99[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[44]_i_3
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/D[4].  Did not re-place instance RISC_PL/DU/DEPR/ex_wb_reg[12]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/EWPR/Q[8].  Did not re-place instance RISC_PL/DU/EWPR/ex_wb_reg_reg[12]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/D[15].  Did not re-place instance RISC_PL/DU/DEPR/ex_wb_reg[23]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/EWPR/Q[19].  Did not re-place instance RISC_PL/DU/EWPR/ex_wb_reg_reg[23]
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/D[7].  Did not re-place instance RISC_PL/DU/DEPR/ex_wb_reg[15]_i_1
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/EWPR/Q[11].  Did not re-place instance RISC_PL/DU/EWPR/ex_wb_reg_reg[15]
+INFO: [Physopt 32-661] Optimized 1 net.  Re-placed 1 instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 1 net or cell. Created 0 new cell, deleted 0 existing cell and moved 1 existing cell
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.098 | TNS=-0.913 |
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6336 ; free virtual = 12608
+Phase 29 Placement Based Optimization | Checksum: 1a70c63c9
+
+Time (s): cpu = 00:02:05 ; elapsed = 00:00:20 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6336 ; free virtual = 12608
+
+Phase 30 MultiInst Placement Optimization
+INFO: [Physopt 32-660] Identified 92 candidate nets for placement-based optimization.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[40]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[24]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[40]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[10].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[50]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[10].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[34]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[41]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[41]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[48]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[48]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[25]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[53]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[53]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[46]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[46]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[30]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[44]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[44]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[28]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[47]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[31]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[47]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[52]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[52]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[49]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[33]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[49]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[32]_i_1/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[3].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[43]_i_2/O
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[3].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[43]_i_1/O
+INFO: [Physopt 32-661] Optimized 0 net.  Re-placed 0 instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6308 ; free virtual = 12592
+Phase 30 MultiInst Placement Optimization | Checksum: 1dd65cc66
+
+Time (s): cpu = 00:02:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6308 ; free virtual = 12592
+
+Phase 31 Slr Crossing Optimization
+Phase 31 Slr Crossing Optimization | Checksum: 1dd65cc66
+
+Time (s): cpu = 00:02:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6306 ; free virtual = 12590
+
+Phase 32 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.098 | TNS=-0.913 |
+INFO: [Physopt 32-702] Processed net RISC_PL/DU/DEPR/Q[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[24]_i_1/O
+INFO: [Physopt 32-735] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.096 | TNS=-0.815 |
+INFO: [Physopt 32-702] Processed net RISC_PL/DU/DEPR/Q[24]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[0].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[40]_i_1/O
+INFO: [Physopt 32-735] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.088 | TNS=-0.719 |
+INFO: [Physopt 32-702] Processed net RISC_PL/DU/DEPR/Q[18]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[10].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[34]_i_1/O
+INFO: [Physopt 32-735] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[10]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.078 | TNS=-0.632 |
+INFO: [Physopt 32-702] Processed net RISC_PL/DU/DEPR/Q[25]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[41]_i_1/O
+INFO: [Physopt 32-735] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.073 | TNS=-0.605 |
+INFO: [Physopt 32-702] Processed net RISC_PL/DU/DEPR/Q[32]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[48]_i_1/O
+INFO: [Physopt 32-735] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[8]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.072 | TNS=-0.532 |
+INFO: [Physopt 32-702] Processed net RISC_PL/DU/DEPR/Q[9]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[25]_i_1/O
+INFO: [Physopt 32-735] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.062 | TNS=-0.504 |
+INFO: [Physopt 32-702] Processed net RISC_PL/DU/DEPR/Q[37]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[13].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[53]_i_1/O
+INFO: [Physopt 32-735] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[13]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.056 | TNS=-0.442 |
+INFO: [Physopt 32-702] Processed net RISC_PL/DU/DEPR/Q[30]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[46]_i_1/O
+INFO: [Physopt 32-735] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[6]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.053 | TNS=-0.386 |
+INFO: [Physopt 32-702] Processed net RISC_PL/DU/DEPR/Q[14]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[6].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[30]_i_1/O
+INFO: [Physopt 32-735] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[6]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.051 | TNS=-0.333 |
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[1].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[41]_i_1/O
+INFO: [Physopt 32-702] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net RISC_PL/DU/DEPR/li_lw[1].  Re-placed instance RISC_PL/DU/DEPR/id_ex_reg[41]_i_2
+INFO: [Physopt 32-735] Processed net RISC_PL/DU/DEPR/li_lw[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.049 | TNS=-0.239 |
+INFO: [Physopt 32-702] Processed net RISC_PL/DU/DEPR/Q[28]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[44]_i_1/O
+INFO: [Physopt 32-702] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[44]_i_2
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/li_lw[4].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[44]_i_2/O
+INFO: [Physopt 32-572] Net RISC_PL/DU/DEPR/li_lw[4] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net RISC_PL/DU/DEPR/li_lw[4]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.036 | TNS=-0.150 |
+INFO: [Physopt 32-702] Processed net RISC_PL/DU/DEPR/Q[15]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[31]_i_1/O
+INFO: [Physopt 32-735] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[7]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.034 | TNS=-0.114 |
+INFO: [Physopt 32-702] Processed net RISC_PL/DU/DEPR/Q[31]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[7].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[47]_i_1/O
+INFO: [Physopt 32-735] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[7]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.028 | TNS=-0.080 |
+INFO: [Physopt 32-702] Processed net RISC_PL/DU/DEPR/Q[36]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[12].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[52]_i_1/O
+INFO: [Physopt 32-735] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[12]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.025 | TNS=-0.052 |
+INFO: [Physopt 32-702] Processed net RISC_PL/DU/DEPR/Q[17]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[33]_i_1/O
+INFO: [Physopt 32-735] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[9]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.017 | TNS=-0.028 |
+INFO: [Physopt 32-702] Processed net RISC_PL/DU/DEPR/Q[33]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[9].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[49]_i_1/O
+INFO: [Physopt 32-735] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[9]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.006 | TNS=-0.011 |
+INFO: [Physopt 32-702] Processed net RISC_PL/DU/DEPR/Q[16]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[8].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[32]_i_1/O
+INFO: [Physopt 32-735] Processed net RISC_PL/DU/DEPR/id_rs1_data_ex[8]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.005 | TNS=-0.005 |
+INFO: [Physopt 32-702] Processed net RISC_PL/DU/DEPR/Q[27]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[3].  Did not re-place instance RISC_PL/DU/DEPR/id_ex_reg[43]_i_1/O
+INFO: [Physopt 32-735] Processed net RISC_PL/DU/DEPR/id_rs2_data_ex[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.002 | TNS=0.000 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.002 | TNS=0.000 |
+Phase 32 Critical Path Optimization | Checksum: 1f5e8ba02
+
+Time (s): cpu = 00:02:29 ; elapsed = 00:00:24 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6287 ; free virtual = 12562
+
+Phase 33 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.002 | TNS=0.000 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.002 | TNS=0.000 |
+Phase 33 Critical Path Optimization | Checksum: 1f5e8ba02
+
+Time (s): cpu = 00:02:29 ; elapsed = 00:00:24 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6287 ; free virtual = 12562
+
+Phase 34 BRAM Enable Optimization
+Phase 34 BRAM Enable Optimization | Checksum: 1f5e8ba02
+
+Time (s): cpu = 00:02:29 ; elapsed = 00:00:24 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6287 ; free virtual = 12562
+INFO: [Physopt 32-960] Skip hold-fix as initial WHS does not violate hold threshold 250 ps
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6287 ; free virtual = 12562
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=0.002 | TNS=0.000 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization          |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Fanout                |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           3  |  00:00:00  |
+|  Placement Based       |          0.002  |         -0.131  |            0  |              0  |                     2  |           0  |           4  |  00:00:11  |
+|  MultiInst Placement   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           4  |  00:00:10  |
+|  Rewire                |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           3  |  00:00:00  |
+|  Critical Cell         |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           3  |  00:00:00  |
+|  Slr Crossing          |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           3  |  00:00:00  |
+|  DSP Register          |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           2  |  00:00:00  |
+|  BRAM Register         |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           2  |  00:00:00  |
+|  URAM Register         |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           2  |  00:00:00  |
+|  Shift Register        |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           2  |  00:00:00  |
+|  Critical Pin          |          0.148  |          2.273  |            0  |              0  |                    17  |           0  |           1  |  00:00:00  |
+|  Very High Fanout      |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Enable           |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Path         |          0.100  |          0.913  |            0  |              0  |                    18  |           0  |           2  |  00:00:02  |
+|  Total                 |          0.250  |          3.055  |            0  |              0  |                    37  |           0  |          33  |  00:00:24  |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6287 ; free virtual = 12562
+Ending Physical Synthesis Task | Checksum: 23d41ba47
+
+Time (s): cpu = 00:02:29 ; elapsed = 00:00:24 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6287 ; free virtual = 12561
+INFO: [Common 17-83] Releasing license: Implementation
+767 Infos, 21 Warnings, 3 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:02:29 ; elapsed = 00:00:24 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6287 ; free virtual = 12562
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6287 ; free virtual = 12562
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6287 ; free virtual = 12563
+INFO: [Common 17-1381] The checkpoint '/home/tanveer/risc/Pipelined/vivado/risc_pl.runs/impl_1/risc_soc_synth_physopt.dcp' has been generated.
+Command: route_design -directive Explore -tns_cleanup
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-270] Using Router directive 'Explore'.
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+Checksum: PlaceDB: b4b0b6e7 ConstDB: 0 ShapeSum: 9fd98aed RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 154198b0c
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6230 ; free virtual = 12517
+Post Restoration Checksum: NetGraph: edeed4de NumContArr: 662ab62e Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 154198b0c
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6230 ; free virtual = 12517
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 154198b0c
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6196 ; free virtual = 12483
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 154198b0c
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6196 ; free virtual = 12483
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 131083995
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6179 ; free virtual = 12466
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.125 | TNS=-0.552 | WHS=-0.330 | THS=-13.846|
+
+Phase 2 Router Initialization | Checksum: 151693d02
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6179 ; free virtual = 12466
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 383
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 383
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 19766f595
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6190 ; free virtual = 12469
+INFO: [Route 35-580] Design has 12 pins with tight setup and hold constraints.
+
+The top 5 pins with tight setup and hold constraints:
+
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|              sys_clk_pin |              sys_clk_pin |                                                                       RISC_PL/DU/EWPR/ex_wb_reg_reg[11]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                       RISC_PL/DU/EWPR/ex_wb_reg_reg[12]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                       RISC_PL/DU/EWPR/ex_wb_reg_reg[20]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                       RISC_PL/DU/EWPR/ex_wb_reg_reg[23]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                       RISC_PL/DU/EWPR/ex_wb_reg_reg[22]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+
+File with complete list of pins: tight_setup_hold_pins.txt
+
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 190
+ Number of Nodes with overlaps = 93
+ Number of Nodes with overlaps = 64
+ Number of Nodes with overlaps = 35
+ Number of Nodes with overlaps = 27
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.237 | TNS=-1.231 | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1bd101939
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6194 ; free virtual = 12473
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 40
+ Number of Nodes with overlaps = 27
+ Number of Nodes with overlaps = 22
+ Number of Nodes with overlaps = 15
+ Number of Nodes with overlaps = 13
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.208 | TNS=-0.512 | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 10fe60a03
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6190 ; free virtual = 12464
+
+Phase 4.3 Global Iteration 2
+ Number of Nodes with overlaps = 33
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 13
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.090 | TNS=-0.249 | WHS=N/A    | THS=N/A    |
+
+Phase 4.3 Global Iteration 2 | Checksum: 11c959789
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6190 ; free virtual = 12463
+
+Phase 4.4 Global Iteration 3
+ Number of Nodes with overlaps = 33
+ Number of Nodes with overlaps = 27
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 10
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.090 | TNS=-0.235 | WHS=N/A    | THS=N/A    |
+
+Phase 4.4 Global Iteration 3 | Checksum: 2373d3df6
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6190 ; free virtual = 12463
+Phase 4 Rip-up And Reroute | Checksum: 2373d3df6
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6190 ; free virtual = 12463
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 TNS Cleanup
+
+Phase 5.1.1 Delay CleanUp
+
+Phase 5.1.1.1 Update Timing
+Phase 5.1.1.1 Update Timing | Checksum: 172294677
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6190 ; free virtual = 12463
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.059  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1.1 Delay CleanUp | Checksum: 172294677
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6190 ; free virtual = 12463
+Phase 5.1 TNS Cleanup | Checksum: 172294677
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6190 ; free virtual = 12463
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 172294677
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6190 ; free virtual = 12463
+Phase 5 Delay and Skew Optimization | Checksum: 172294677
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6190 ; free virtual = 12463
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 25dcb2eb1
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6190 ; free virtual = 12463
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.059  | TNS=0.000  | WHS=0.086  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 25dcb2eb1
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6190 ; free virtual = 12463
+Phase 6 Post Hold Fix | Checksum: 25dcb2eb1
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6190 ; free virtual = 12463
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.119654 %
+  Global Horizontal Routing Utilization  = 0.118577 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 1798e95ec
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6190 ; free virtual = 12463
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 1798e95ec
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6190 ; free virtual = 12463
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 123c6c769
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6190 ; free virtual = 12463
+
+Phase 10 Post Router Timing
+INFO: [Route 35-20] Post Routing Timing Summary | WNS=0.060  | TNS=0.000  | WHS=0.088  | THS=0.000  |
+
+INFO: [Route 35-61] The design met the timing requirement.
+Phase 10 Post Router Timing | Checksum: 11e46d035
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6190 ; free virtual = 12463
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6299 ; free virtual = 12572
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+787 Infos, 21 Warnings, 3 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6299 ; free virtual = 12572
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6299 ; free virtual = 12572
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2568.656 ; gain = 0.000 ; free physical = 6297 ; free virtual = 12572
+INFO: [Common 17-1381] The checkpoint '/home/tanveer/risc/Pipelined/vivado/risc_pl.runs/impl_1/risc_soc_synth_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file risc_soc_synth_drc_routed.rpt -pb risc_soc_synth_drc_routed.pb -rpx risc_soc_synth_drc_routed.rpx
+Command: report_drc -file risc_soc_synth_drc_routed.rpt -pb risc_soc_synth_drc_routed.pb -rpx risc_soc_synth_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/tanveer/risc/Pipelined/vivado/risc_pl.runs/impl_1/risc_soc_synth_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file risc_soc_synth_methodology_drc_routed.rpt -pb risc_soc_synth_methodology_drc_routed.pb -rpx risc_soc_synth_methodology_drc_routed.rpx
+Command: report_methodology -file risc_soc_synth_methodology_drc_routed.rpt -pb risc_soc_synth_methodology_drc_routed.pb -rpx risc_soc_synth_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/tanveer/risc/Pipelined/vivado/risc_pl.runs/impl_1/risc_soc_synth_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file risc_soc_synth_power_routed.rpt -pb risc_soc_synth_power_summary_routed.pb -rpx risc_soc_synth_power_routed.rpx
+Command: report_power -file risc_soc_synth_power_routed.rpt -pb risc_soc_synth_power_summary_routed.pb -rpx risc_soc_synth_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+799 Infos, 21 Warnings, 3 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file risc_soc_synth_route_status.rpt -pb risc_soc_synth_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file risc_soc_synth_timing_summary_routed.rpt -pb risc_soc_synth_timing_summary_routed.pb -rpx risc_soc_synth_timing_summary_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [runtcl-4] Executing : report_incremental_reuse -file risc_soc_synth_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file risc_soc_synth_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file risc_soc_synth_bus_skew_routed.rpt -pb risc_soc_synth_bus_skew_routed.pb -rpx risc_soc_synth_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+Command: phys_opt_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Vivado_Tcl 4-241] Physical synthesis in post route mode ( 100.0% nets are fully routed)
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: Explore
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+815 Infos, 21 Warnings, 3 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2703.176 ; gain = 0.000 ; free physical = 6330 ; free virtual = 12604
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2703.176 ; gain = 0.000 ; free physical = 6327 ; free virtual = 12603
+INFO: [Common 17-1381] The checkpoint '/home/tanveer/risc/Pipelined/vivado/risc_pl.runs/impl_1/risc_soc_synth_postroute_physopt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -warn_on_violation -file risc_soc_synth_timing_summary_postroute_physopted.rpt -pb risc_soc_synth_timing_summary_postroute_physopted.pb -rpx risc_soc_synth_timing_summary_postroute_physopted.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file risc_soc_synth_bus_skew_postroute_physopted.rpt -pb risc_soc_synth_bus_skew_postroute_physopted.pb -rpx risc_soc_synth_bus_skew_postroute_physopted.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 17 17:13:20 2023...
