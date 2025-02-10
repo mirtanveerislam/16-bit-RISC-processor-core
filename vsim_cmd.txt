@@ -1,0 +1,45 @@
+// ----- NON-PIPELINED -----
+quit -sim
+vsim -voptargs=+acc work.RISC_TB
+mem load -i /home/tanveer/risc/reg_file.mem /RISC_TB/RISC_SoC/RISC_NP/DU/RF/registers
+mem load -i /home/tanveer/risc/imem.mem     /RISC_TB/RISC_SoC/IMEM/mem
+mem load -i /home/tanveer/risc/dmem.mem     /RISC_TB/RISC_SoC/DMEM/mem
+add wave -group RISC_TB  sim:/RISC_TB/*
+add wave -group RISC_SoC sim:/RISC_TB/RISC_SoC/*
+add wave -group RISC_NP  sim:/RISC_TB/RISC_SoC/RISC_NP/*
+add wave -group CU       sim:/RISC_TB/RISC_SoC/RISC_NP/CU/*
+add wave -group DU       sim:/RISC_TB/RISC_SoC/RISC_NP/DU/*
+add wave -group IFU      sim:/RISC_TB/RISC_SoC/RISC_NP/DU/IFU/*
+add wave -group IDU      sim:/RISC_TB/RISC_SoC/RISC_NP/DU/IDU/*
+add wave -group EXU      sim:/RISC_TB/RISC_SoC/RISC_NP/DU/EXU/*
+add wave -group ALU      sim:/RISC_TB/RISC_SoC/RISC_NP/DU/EXU/ALU/*
+add wave -group RF       sim:/RISC_TB/RISC_SoC/RISC_NP/DU/RF/*
+add wave -group IMEM     sim:/RISC_TB/RISC_SoC/IMEM/*
+add wave -group DMEM     sim:/RISC_TB/RISC_SoC/DMEM/*
+run -all
+
+
+
+// ----- PIPELINED -----
+quit -sim
+vsim -voptargs=+acc work.RISC_TB
+mem load -i /home/tanveer/risc/reg_file.mem /RISC_TB/RISC_SoC/RISC_PL/DU/RF/registers
+mem load -i /home/tanveer/risc/imem.mem     /RISC_TB/RISC_SoC/IMEM/mem
+mem load -i /home/tanveer/risc/dmem.mem     /RISC_TB/RISC_SoC/DMEM/mem
+add wave -group RISC_TB  sim:/RISC_TB/*
+add wave -group RISC_SoC sim:/RISC_TB/RISC_SoC/*
+add wave -group RISC_PL  sim:/RISC_TB/RISC_SoC/RISC_PL/*
+add wave -group CU       sim:/RISC_TB/RISC_SoC/RISC_PL/CU/*
+add wave -group DU       sim:/RISC_TB/RISC_SoC/RISC_PL/DU/*
+add wave -group IFU      sim:/RISC_TB/RISC_SoC/RISC_PL/DU/IFU/*
+add wave -group FDPR     sim:/RISC_TB/RISC_SoC/RISC_PL/DU/FDPR/*
+add wave -group IDU      sim:/RISC_TB/RISC_SoC/RISC_PL/DU/IDU/*
+add wave -group DEPR     sim:/RISC_TB/RISC_SoC/RISC_PL/DU/DEPR/*
+add wave -group EXU      sim:/RISC_TB/RISC_SoC/RISC_PL/DU/EXU/*
+add wave -group EWPR     sim:/RISC_TB/RISC_SoC/RISC_PL/DU/EWPR/*
+add wave -group RF       sim:/RISC_TB/RISC_SoC/RISC_PL/DU/RF/*
+add wave -group DFU      sim:/RISC_TB/RISC_SoC/RISC_PL/DU/DFU/*
+add wave -group IMEM     sim:/RISC_TB/RISC_SoC/IMEM/*
+add wave -group DMEM     sim:/RISC_TB/RISC_SoC/DMEM/*
+run -all
+

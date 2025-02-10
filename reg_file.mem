@@ -1,0 +1,19 @@
+// memory data file (do not edit the following line - required for mem load use)
+// instance=/RISC_TB/RISC_SoC/RISC_NP/DU/RF/registers
+// format=mti addressradix=h dataradix=h version=1.0 wordsperline=1
+f: xxxx
+e: xxxx
+d: xxxx
+c: xxxx
+b: xxxx
+a: xxxx
+9: xxxx
+8: xxxx
+7: xxxx
+6: xxxx
+5: xxxx
+4: xxxx
+3: xxxx
+2: xxxx
+1: xxxx
+0: xxxx

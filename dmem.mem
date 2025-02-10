@@ -1,0 +1,35 @@
+// memory data file (do not edit the following line - required for mem load use)
+// instance=/RISC_TB/RISC_SoC/DMEM/mem
+// format=mti addressradix=h dataradix=h version=1.0 wordsperline=1
+1f: 0056
+1e: 0019
+1d: xxxx
+1c: xxxx
+1b: xxxx
+1a: xxxx
+19: xxxx
+18: xxxx
+17: xxxx
+16: xxxx
+15: xxxx
+14: xxxx
+13: xxxx
+12: xxxx
+11: xxxx
+10: xxxx
+0f: xxxx
+0e: xxxx
+0d: xxxx
+0c: xxxx
+0b: xxxx
+0a: xxxx
+09: xxxx
+08: xxxx
+07: xxxx
+06: xxxx
+05: xxxx
+04: xxxx
+03: xxxx
+02: xxxx
+01: xxxx
+00: xxxx
